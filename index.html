@@ -1,18 +1,22 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta name="google-site-verification" content="6EaiIyb9QDkuwp-KokgL1OXxS5iawQT0y58k0JvOnvI" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Mohd Anas Siddiqui - Portfolio</title>
+
     <style>
-        /* Website ka Design aur Styling */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        * {
             margin: 0;
             padding: 0;
-            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #000000;
             color: #ffffff;
             text-align: center;
         }
@@ -24,12 +28,13 @@
         h1 {
             font-size: 2.5rem;
             margin-bottom: 10px;
-            color: #ffdf00;
+            color: #FFD700;
         }
 
         p {
-            font-size: 1.2rem;
-            color: #e0e0e0;
+            font-size: 1.1rem;
+            color: #ffffff;
+            line-height: 1.6;
         }
 
         .container {
@@ -38,26 +43,117 @@
             padding: 20px;
         }
 
+        /* Cards */
         .card {
-            background: rgba(255, 255, 255, 0.1);
+            background: #111111;
             margin: 20px 0;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            padding: 25px;
+            border-radius: 15px;
+            border: 2px solid #FFD700;
+            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.20);
         }
 
         .card h2 {
-            color: #00ffcc;
+            color: #FFD700;
+            margin-bottom: 12px;
+        }
+
+        /* My Skills Card */
+        .skills-card {
+            text-decoration: none;
+            color: #000000;
+            display: block;
+            background: #FFD700;
+            border: 2px solid #FFD700;
+            transition: 0.3s;
+        }
+
+        .skills-card h2,
+        .skills-card p {
+            color: #000000;
+        }
+
+        .skills-card:hover {
+            background: #FFC400;
+            transform: scale(1.02);
+        }
+
+        /* Contact Links */
+        .card a {
+            color: #FFD700;
+            font-weight: bold;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            background: #FFD700;
+            color: #000000 !important;
+            padding: 12px 25px;
+            margin: 10px 5px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #FFC400;
+            transform: scale(1.05);
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-btn {
+            display: inline-block;
+            background: #FFD700;
+            color: #000000 !important;
+            padding: 13px 28px;
+            margin-top: 12px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .whatsapp-btn:hover {
+            background: #FFC400;
+            transform: scale(1.05);
         }
 
         footer {
             margin-top: 40px;
             padding: 20px;
-            background: rgba(0, 0, 0, 0.3);
+            background: #111111;
+            border-top: 2px solid #FFD700;
+        }
+
+        footer p {
+            color: #ffffff;
             font-size: 0.9rem;
+        }
+
+        /* Mobile */
+        @media (max-width: 600px) {
+
+            header {
+                padding: 35px 15px;
+            }
+
+            h1 {
+                font-size: 1.9rem;
+            }
+
+            .container {
+                padding: 15px;
+            }
+
+            .card {
+                padding: 20px;
+            }
         }
     </style>
 </head>
+
 <body>
 
     <header>
@@ -66,41 +162,62 @@
     </header>
 
     <div class="container">
+
         <!-- About Me Section -->
         <div class="card">
             <h2>About Me</h2>
-            <p>Hello! My name is <b>Mohd Anas Siddiqui</b>. Welcome to my personal website. I am interested in computer work, web designing and learning new technologies.</p>
+
+            <p>
+                Hello! My name is <b>Mohd Anas Siddiqui</b>.
+                Welcome to my personal website.
+                I am interested in computer work, web designing
+                and learning new technologies.
+            </p>
         </div>
 
-        <a href="skills.html" style="text-decoration: none; color: inherit;">
-    <div class="card" style="border: 2px solid #d4af37; color: black;">
-        <h2>My Skills</h2>
-        <p>Tap here to view my full skills...</p>
-    </div>
-</a>
+        <!-- My Skills Section -->
+        <a href="skills.html" class="skills-card">
+            <div class="card">
+                <h2>My Skills</h2>
+                <p>Tap here to view my full skills...</p>
+            </div>
+        </a>
 
         <!-- Contact Section -->
-        
-<div class="card">
-    <h2>Contact Me</h2>
+        <div class="card">
+            <h2>Contact Me</h2>
 
-    <p>You can contact me using the details below:</p>
+            <p>You can contact me using the details below:</p>
 
-    <p>
-        <b>Email:</b>
-        <a href="mailto:anas9533@gmail.com">anas9533@gmail.com</a>
-    </p>
+            <p>
+                <b>Email:</b>
+                <a href="mailto:anas9533@gmail.com">
+                    anas9533@gmail.com
+                </a>
+            </p>
 
-    <p>
-        <b>Mobile:</b>
-        <a href="tel:+918799028385">8799028385</a>
-    </p>
-</div>
+            <p>
+                <b>Mobile:</b>
+                <a href="tel:+918799028385">
+                    8799028385
+                </a>
+            </p>
+
+            <!-- WhatsApp Button -->
+            <a
+                href="https://wa.me/918799028385"
+                class="whatsapp-btn"
+                target="_blank">
+                WhatsApp Me
+            </a>
         </div>
+
     </div>
 
     <footer>
-        <p>&copy; 2026 Mohd Anas Siddiqui. All Rights Reserved.</p>
+        <p>
+            &copy; 2026 Mohd Anas Siddiqui. All Rights Reserved.
+        </p>
     </footer>
 
 </body>
