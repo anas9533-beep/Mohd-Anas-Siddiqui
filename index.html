@@ -1,224 +1,623 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="google-site-verification" content="6EaiIyb9QDkuwp-KokgL1OXxS5iawQT0y58k0JvOnvI" />
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Mohd Anas Siddiqui - Portfolio</title>
+<title>Mohd Anas Siddiqui | Web Designer & Digital Creator</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta name="description" content="Official personal website of Mohd Anas Siddiqui - Web Designer, Digital Creator and Computer Professional.">
+<meta name="author" content="Mohd Anas Siddiqui">
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #000000;
-            color: #ffffff;
-            text-align: center;
-        }
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-        header {
-            padding: 50px 20px;
-        }
+html{
+    scroll-behavior:smooth;
+}
 
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-            color: #FFD700;
-        }
+body{
+    font-family:Arial,sans-serif;
+    background:#0b0b0b;
+    color:#fff;
+    line-height:1.6;
+}
 
-        p {
-            font-size: 1.1rem;
-            color: #ffffff;
-            line-height: 1.6;
-        }
+/* NAVBAR */
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+    background:rgba(5,5,5,.96);
+    border-bottom:1px solid #292929;
+    padding:15px 30px;
+}
 
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+.nav-container{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
 
-        /* Cards */
-        .card {
-            background: #111111;
-            margin: 20px 0;
-            padding: 25px;
-            border-radius: 15px;
-            border: 2px solid #FFD700;
-            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.20);
-        }
+.logo{
+    color:#d4af37;
+    font-size:21px;
+    font-weight:bold;
+    text-decoration:none;
+}
 
-        .card h2 {
-            color: #FFD700;
-            margin-bottom: 12px;
-        }
+.nav-links{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
 
-        /* My Skills Card */
-        .skills-card {
-            text-decoration: none;
-            color: #000000;
-            display: block;
-            background: #FFD700;
-            border: 2px solid #FFD700;
-            transition: 0.3s;
-        }
+.nav-links a{
+    color:#fff;
+    text-decoration:none;
+    font-weight:bold;
+    cursor:pointer;
+}
 
-        .skills-card h2,
-        .skills-card p {
-            color: #000000;
-        }
+.nav-links a:hover{
+    color:#d4af37;
+}
 
-        .skills-card:hover {
-            background: #FFC400;
-            transform: scale(1.02);
-        }
+/* MOBILE MENU */
+.menu-btn{
+    display:none;
+    font-size:28px;
+    color:#d4af37;
+    cursor:pointer;
+}
 
-        /* Contact Links */
-        .card a {
-            color: #FFD700;
-            font-weight: bold;
-        }
+/* ALL INTERFACES */
+.page{
+    display:none;
+    min-height:100vh;
+    padding:110px 20px 60px;
+    background:linear-gradient(135deg,#080808,#171717,#080808);
+}
 
-        /* Buttons */
-        .btn {
-            display: inline-block;
-            background: #FFD700;
-            color: #000000 !important;
-            padding: 12px 25px;
-            margin: 10px 5px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: 0.3s;
-        }
+.page.active{
+    display:block;
+}
 
-        .btn:hover {
-            background: #FFC400;
-            transform: scale(1.05);
-        }
+/* HOME */
+.home-content{
+    min-height:80vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
 
-        /* WhatsApp Button */
-        .whatsapp-btn {
-            display: inline-block;
-            background: #FFD700;
-            color: #000000 !important;
-            padding: 13px 28px;
-            margin-top: 12px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: 0.3s;
-        }
+.hero{
+    max-width:850px;
+}
 
-        .whatsapp-btn:hover {
-            background: #FFC400;
-            transform: scale(1.05);
-        }
+.hero h1{
+    font-size:48px;
+    color:#d4af37;
+    margin-bottom:15px;
+}
 
-        footer {
-            margin-top: 40px;
-            padding: 20px;
-            background: #111111;
-            border-top: 2px solid #FFD700;
-        }
+.hero h2{
+    font-size:25px;
+    margin-bottom:15px;
+}
 
-        footer p {
-            color: #ffffff;
-            font-size: 0.9rem;
-        }
+.hero p{
+    color:#ccc;
+    font-size:17px;
+    margin-bottom:30px;
+}
 
-        /* Mobile */
-        @media (max-width: 600px) {
+/* BUTTONS */
+.btn{
+    display:inline-block;
+    padding:13px 25px;
+    margin:7px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+    border:1px solid #d4af37;
+    cursor:pointer;
+}
 
-            header {
-                padding: 35px 15px;
-            }
+.btn-gold{
+    background:#d4af37;
+    color:#000;
+}
 
-            h1 {
-                font-size: 1.9rem;
-            }
+.btn-dark{
+    color:#d4af37;
+    background:#111;
+}
 
-            .container {
-                padding: 15px;
-            }
+.btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 5px 20px rgba(212,175,55,.35);
+}
 
-            .card {
-                padding: 20px;
-            }
-        }
-    </style>
+/* TITLE */
+.title{
+    text-align:center;
+    color:#d4af37;
+    font-size:35px;
+    margin-bottom:40px;
+}
+
+/* CONTENT AREA */
+.content{
+    max-width:1100px;
+    margin:auto;
+}
+
+/* ABOUT */
+.about-box{
+    max-width:850px;
+    margin:auto;
+    background:#d4af37;
+    border:1px solid #fff;
+    border-radius:18px;
+    padding:35px 25px;
+    text-align:center;
+    color:#000;
+}
+
+.about-box p{
+    color:#000;
+    font-size:17px;
+}
+
+/* CARDS */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#d4af37;
+    border:1px solid #fff;
+    border-radius:15px;
+    padding:30px 20px;
+    text-align:center;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-7px);
+    box-shadow:0 5px 20px rgba(212,175,55,.35);
+}
+
+.card h3{
+    color:#000;
+    margin-bottom:10px;
+}
+
+.card p{
+    color:#000;
+}
+
+/* CONTACT */
+.contact-box{
+    max-width:650px;
+    margin:auto;
+    background:#d4af37;
+    border-radius:18px;
+    padding:35px 25px;
+    border:1px solid #fff;
+    text-align:center;
+    color:#000;
+}
+
+.contact-item{
+    margin:20px 0;
+    font-size:17px;
+    color:#000;
+}
+
+.contact-item strong{
+    color:#000;
+}
+
+.contact-item a{
+    color:#000;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.contact-item a:hover{
+    text-decoration:underline;
+}
+
+/* BACK TO TOP */
+.top-btn{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    background:#d4af37;
+    color:#000;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    font-size:22px;
+    font-weight:bold;
+    z-index:999;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:25px 15px;
+    background:#050505;
+    color:#999;
+    border-top:1px solid #222;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+    nav{
+        padding:14px 20px;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+
+    .nav-links{
+        position:absolute;
+        top:65px;
+        left:0;
+        width:100%;
+        background:#080808;
+        flex-direction:column;
+        text-align:center;
+        gap:0;
+        display:none;
+        border-top:1px solid #292929;
+    }
+
+    .nav-links.active{
+        display:flex;
+    }
+
+    .nav-links li{
+        padding:14px;
+        border-bottom:1px solid #222;
+    }
+
+    .hero h1{
+        font-size:34px;
+    }
+
+    .hero h2{
+        font-size:21px;
+    }
+
+    .title{
+        font-size:29px;
+    }
+
+    .page{
+        padding:100px 15px 50px;
+    }
+}
+</style>
 </head>
 
 <body>
 
-    <header>
-        <h1>Hello, I am Mohd Anas Siddiqui</h1>
-        <p>Welcome to my official website</p>
-    </header>
+<!-- NAVIGATION -->
+<nav>
+    <div class="nav-container">
 
-    <div class="container">
-
-        <!-- About Me Section -->
-        <div class="card">
-            <h2>About Me</h2>
-
-            <p>
-                Hello! My name is <b>Mohd Anas Siddiqui</b>.
-                Welcome to my personal website.
-                I am interested in computer work, web designing
-                and learning new technologies.
-            </p>
-        </div>
-
-        <!-- My Skills Section -->
-        <a href="skills.html" class="skills-card">
-            <div class="card">
-                <h2>My Skills</h2>
-                <p>Tap here to view my full skills...</p>
-            </div>
+        <a href="#" class="logo" onclick="showPage('home'); closeMenu();">
+            Mohd Anas Siddiqui
         </a>
 
-        <!-- Contact Section -->
-        <div class="card">
-            <h2>Contact Me</h2>
+        <div class="menu-btn" onclick="toggleMenu()">☰</div>
 
-            <p>You can contact me using the details below:</p>
+        <ul class="nav-links" id="navLinks">
+
+            <li>
+                <a onclick="showPage('home'); closeMenu()">Home</a>
+            </li>
+
+            <li>
+                <a onclick="showPage('services'); closeMenu()">Services</a>
+            </li>
+
+            <li>
+                <a onclick="showPage('skills'); closeMenu()">Skills</a>
+            </li>
+
+            <li>
+                <a onclick="showPage('about'); closeMenu()">About</a>
+            </li>
+
+            <li>
+                <a onclick="showPage('contact'); closeMenu()">Contact Us</a>
+            </li>
+
+        </ul>
+
+    </div>
+</nav>
+
+
+<!-- HOME INTERFACE -->
+<div id="home" class="page active">
+
+    <div class="home-content">
+
+        <div class="hero">
+
+            <h1>Mohd Anas Siddiqui</h1>
+
+            <h2>Web Designer & Digital Creator</h2>
 
             <p>
-                <b>Email:</b>
-                <a href="mailto:anas9533@gmail.com">
-                    anas9533@gmail.com
-                </a>
+                Welcome to my personal website. I am a Computer Professional,
+                Web Designer and Digital Creator.
             </p>
 
-            <p>
-                <b>Mobile:</b>
-                <a href="tel:+918799028385">
-                    8799028385
-                </a>
-            </p>
+            <button class="btn btn-gold"
+                    onclick="showPage('skills')">
+                My Skills
+            </button>
 
-            <!-- WhatsApp Button -->
-            <a
-                href="https://wa.me/918799028385"
-                class="whatsapp-btn"
-                target="_blank">
-                WhatsApp Me
-            </a>
+            <button class="btn btn-dark"
+                    onclick="showPage('about')">
+                About Me
+            </button>
+
+            <button class="btn btn-dark"
+                    onclick="showPage('contact')">
+                Contact Me
+            </button>
+
         </div>
 
     </div>
 
-    <footer>
-        <p>
-            &copy; 2026 Mohd Anas Siddiqui. All Rights Reserved.
-        </p>
-    </footer>
+</div>
+
+
+<!-- SERVICES INTERFACE -->
+<div id="services" class="page">
+
+    <div class="content">
+
+        <h2 class="title">My Services</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Website Design</h3>
+                <p>
+                    Modern and responsive personal websites.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Web Page Creation</h3>
+                <p>
+                    Clean and professional HTML & CSS web pages.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>DTP Services</h3>
+                <p>
+                    Professional digital publishing and document work.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Computer Services</h3>
+                <p>
+                    Computer-based digital and documentation work.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- SKILLS INTERFACE -->
+<div id="skills" class="page">
+
+    <div class="content">
+
+        <h2 class="title">My Skills</h2>
+
+        <div class="cards">
+
+            <div class="card">
+                <h3>Web Designing</h3>
+                <p>
+                    Creating modern, clean and responsive websites.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>HTML & CSS</h3>
+                <p>
+                    Building attractive and mobile-friendly web pages.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>DTP</h3>
+                <p>
+                    Digital publishing and professional document designing.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Typing</h3>
+                <p>
+                    English 50 WPM & Hindi 35 WPM.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Computer Work</h3>
+                <p>
+                    Professional computer operations and digital tasks.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Digital Creator</h3>
+                <p>
+                    Creating digital content and online projects.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ABOUT INTERFACE -->
+<div id="about" class="page">
+
+    <div class="content">
+
+        <h2 class="title">About Me</h2>
+
+        <div class="about-box">
+
+            <p>
+                Hello! I am <strong>Mohd Anas Siddiqui</strong>.
+                I am a Web Designer, Digital Creator and Computer Professional.
+                I enjoy creating modern websites and working with digital
+                technology.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- CONTACT INTERFACE -->
+<div id="contact" class="page">
+
+    <div class="content">
+
+        <h2 class="title">Contact Us</h2>
+
+        <div class="contact-box">
+
+            <div class="contact-item">
+                <strong>📞 Mobile</strong><br>
+                <a href="tel:8799028385">
+                    8799028385
+                </a>
+            </div>
+
+            <div class="contact-item">
+                <strong>✉️ Email</strong><br>
+                <a href="mailto:anas9533@gmail.com">
+                    anas9533@gmail.com
+                </a>
+            </div>
+
+            <div class="contact-item">
+                <strong>📍 Location</strong><br>
+                Prayagraj, Uttar Pradesh, India
+            </div>
+
+            <a href="mailto:anas9533@gmail.com"
+               class="btn btn-dark">
+                Hire Me
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- BACK TO TOP -->
+<a href="#" class="top-btn"
+   onclick="showPage('home')">
+    ↑
+</a>
+
+
+<!-- FOOTER -->
+<footer>
+    © 2026 Mohd Anas Siddiqui. All Rights Reserved.
+</footer>
+
+
+<script>
+
+/* SHOW ONLY SELECTED INTERFACE */
+function showPage(pageId){
+
+    const pages = document.querySelectorAll(".page");
+
+    pages.forEach(function(page){
+        page.classList.remove("active");
+    });
+
+    document.getElementById(pageId).classList.add("active");
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+}
+
+
+/* MOBILE MENU */
+function toggleMenu(){
+
+    document
+    .getElementById("navLinks")
+    .classList.toggle("active");
+
+}
+
+
+/* CLOSE MOBILE MENU */
+function closeMenu(){
+
+    document
+    .getElementById("navLinks")
+    .classList.remove("active");
+
+}
+
+</script>
 
 </body>
 </html>
