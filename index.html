@@ -87,7 +87,7 @@ nav{
 /* HOME */
 
 header{
-    min-height:100vh;
+    min-height:auto;
     width:100%;
 
     display:flex;
@@ -96,7 +96,7 @@ header{
 
     text-align:center;
 
-    padding:130px 20px 70px;
+    padding:130px 20px 65px;
 
     position:relative;
     overflow:hidden;
@@ -174,8 +174,6 @@ header:before{
     transition:.3s;
     border:1px solid #d4af37;
 }
-
-/* All three Home buttons same style */
 
 .btn-gold{
     background:#111;
@@ -434,6 +432,23 @@ footer span{
 
 }
 
+/* DESKTOP FIX */
+
+@media(min-width:769px){
+
+    header{
+        min-height:0;
+        height:auto;
+        padding-top:120px;
+        padding-bottom:55px;
+    }
+
+    .hero{
+        max-width:900px;
+    }
+
+}
+
 /* MOBILE */
 
 @media(max-width:768px){
@@ -479,7 +494,7 @@ footer span{
         border-bottom:1px solid #222;
     }
 
-    /* MOBILE HOME */
+    /* MOBILE HOME - SAME */
 
     header{
         min-height:100vh;
@@ -567,7 +582,6 @@ Mohd Anas Siddiqui
 
 </nav>
 
-
 <!-- HOME -->
 
 <header id="home">
@@ -589,17 +603,14 @@ and digital solutions with creativity and technology.
 
 <div class="buttons">
 
-<!-- My Skills -->
 <a href="#skills" class="btn btn-dark">
 My Skills
 </a>
 
-<!-- About Me -->
 <a href="#about" class="btn btn-dark">
 About Me
 </a>
 
-<!-- Hire Me -->
 <a href="#contact" class="btn btn-dark">
 Hire Me
 </a>
@@ -609,7 +620,6 @@ Hire Me
 </div>
 
 </header>
-
 
 <!-- ABOUT -->
 
@@ -630,7 +640,6 @@ professional online experiences.
 </div>
 
 </section>
-
 
 <!-- SKILLS -->
 
@@ -692,7 +701,6 @@ Creative digital content and online projects.
 
 </section>
 
-
 <!-- SERVICES -->
 
 <section id="services">
@@ -737,7 +745,6 @@ Computer-based digital and documentation work.
 
 </section>
 
-
 <!-- PORTFOLIO -->
 
 <section id="portfolio">
@@ -773,7 +780,6 @@ Modern and responsive website design projects.
 </div>
 
 </section>
-
 
 <!-- EXPERIENCE -->
 
@@ -812,7 +818,6 @@ Creating modern personal websites and digital projects.
 
 </section>
 
-
 <!-- CONTACT -->
 
 <section id="contact">
@@ -849,7 +854,6 @@ Hire Me
 
 </section>
 
-
 <!-- WHATSAPP -->
 
 <a
@@ -860,13 +864,11 @@ aria-label="Chat on WhatsApp">
 💬
 </a>
 
-
 <!-- BACK TO TOP -->
 
 <a href="#home" class="top-btn">
 ↑
 </a>
-
 
 <!-- FOOTER -->
 
@@ -876,7 +878,6 @@ aria-label="Chat on WhatsApp">
 All Rights Reserved.
 
 </footer>
-
 
 <script>
 
